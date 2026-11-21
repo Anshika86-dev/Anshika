@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "Simple Interest Calculator"
+
+read -p "Enter the principal amount: " principal
+read -p "Enter the rate of interest: " rate
+read -p "Enter the time period in years: " time
+
+simple_interest=$(awk "BEGIN {print ($principal * $rate * $time) / 100}")
+total_amount=$(awk "BEGIN {print $principal + $simple_interest}")
+
+echo "Simple Interest: $simple_interest"
+echo "Total Amount: $total_amount"
